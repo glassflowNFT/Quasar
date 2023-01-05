@@ -13,7 +13,8 @@ import {
   CardHeader, 
   CardBody,
   HStack,
-  Center} from '@chakra-ui/react'
+  Center,
+  useBreakpointValue} from '@chakra-ui/react'
 import { MoonIcon } from '@chakra-ui/icons'
 import Navbar from '../packages/stateless/components/Navbar'
 import stars from '../public/stars.jpeg'
@@ -26,6 +27,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   // const { colorMode, toggleColorMode } = useColorMode()
+
+  const isDesktop = useBreakpointValue({ base: false, lg: true })
 
   return (
     <>
@@ -52,11 +55,13 @@ export default function Home() {
                               </HStack>
                   </Heading>
                   </Center>
-                            <Text color='white'>
+                  <Center>
+                            <Text w={'50%'} color='white'>
                             Quasar Module is a smart contract application and framework for custom IRL events.
                             </Text>
+                 </Center>         
                   <Center>
-                    <Card variant={'filled'} backgroundColor='#150050' opacity={'80%'} w={500} >
+                    <Card variant={'filled'} backgroundColor='#150050' w={500} mt={10}>
                         <CardHeader>
                             <Heading color={'white'} size='md'>
                                 What is Quasar?
