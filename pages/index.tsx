@@ -56,7 +56,7 @@ export default function Home() {
                   </Heading>
                   </Center>
                   <Center>
-                            <Text w={'50%'} color='white'>
+                            <Text w={'75%'} color='white'>
                             Quasar Module is a smart contract application and framework for custom IRL events.
                             </Text>
                  </Center>         
