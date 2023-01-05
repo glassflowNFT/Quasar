@@ -50,21 +50,21 @@ export default function Home() {
                             lineHeight={'100%'}
                             mt={20}>
                               <HStack>
-                              <Text  color={'white'}>Transparent Judging /</Text>
+                              <Text>Transparent Judging /</Text>
                               <Text textShadow={'2px 3px white'} color={'#FB2576'}>Voting</Text> 
                               </HStack>
                   </Heading>
                   </Center>
                   <Center>
                        <Stack alignItems={'center'}>
-                            <Text pb={5} w={'75%'} color='white'>
+                            <Text pb={5} w={'75%'} >
                             Quasar Module is a smart contract application and framework for custom IRL events.
                             </Text>
                             <Button>Enter App <ExternalLinkIcon mx='2px'/></Button>
                        </Stack>
                  </Center>         
                   <Center>
-                    <Card variant={'filled'} backgroundColor='#150050' w={500}>
+                    <Card boxShadow={'white'} variant={'filled'} backgroundColor='#150050' w={500}>
                         <CardHeader>
                             <Heading color={'white'} size='md'>
                                 What is Quasar?
@@ -74,11 +74,11 @@ export default function Home() {
                         The Quasar Module aims to bring the power of CosmWasm, and the integrity of on-chain voting to any hosted event that will elevate both the guest and host experience.
                         Some of the things we do:
 
-                              <ul>
-                                <br />
-                                <li> In-Event Entry Judging </li>
-                                <li> Ticket Minting, Distribution, and Attendance Management </li>
-                              </ul>
+                         <ul>
+                            <br />
+                            <li> In-Event Entry Judging </li>
+                            <li> Ticket Minting, Distribution, and Attendance Management </li>
+                         </ul>
                         </CardBody>
                     </Card>
                   </Center>
