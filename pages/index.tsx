@@ -15,7 +15,7 @@ import {
   HStack,
   Center,
   useBreakpointValue} from '@chakra-ui/react'
-import { MoonIcon } from '@chakra-ui/icons'
+import { MoonIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 import Navbar from '../packages/stateless/components/Navbar'
 import stars from '../public/stars.jpeg'
 
@@ -56,12 +56,15 @@ export default function Home() {
                   </Heading>
                   </Center>
                   <Center>
-                            <Text w={'75%'} color='white'>
+                       <Stack alignItems={'center'}>
+                            <Text pb={5} w={'75%'} color='white'>
                             Quasar Module is a smart contract application and framework for custom IRL events.
                             </Text>
+                            <Button>Enter App <ExternalLinkIcon mx='2px'/></Button>
+                       </Stack>
                  </Center>         
                   <Center>
-                    <Card variant={'filled'} backgroundColor='#150050' w={500} mt={10}>
+                    <Card variant={'filled'} backgroundColor='#150050' w={500}>
                         <CardHeader>
                             <Heading color={'white'} size='md'>
                                 What is Quasar?

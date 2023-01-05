@@ -28,11 +28,11 @@ function Navbar() {
                           <Flex>
                           <HStack spacing="8" justify="space-between">
                               <Link color={'white'} href='https://github.com/glassflowNFT/Quasar'>Documentation <ExternalLinkIcon mx='2px'/> </Link>
-                              <Button>Enter App</Button>
+                              <Button>Enter App <ExternalLinkIcon mx='2px'/></Button>
                           </HStack>
                       </Flex>
                         ) : (
-                          <Button>Enter App</Button>
+                          <Button>Enter App <ExternalLinkIcon mx='2px'/></Button>
                         )}   
                     </HStack>
                 </Container>
