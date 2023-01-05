@@ -75,10 +75,9 @@ export default function Home() {
                         Some of the things we do:
 
                               <ul>
-                                <Text pt={5}>
+                                <br />
                                 <li> In-Event Entry Judging </li>
-                                <li> Ticket Minting, Distribution, and Attendance Management  </li>
-                                </Text>
+                                <li> Ticket Minting, Distribution, and Attendance Management </li>
                               </ul>
                         </CardBody>
                     </Card>
