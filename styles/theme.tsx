@@ -1,11 +1,12 @@
 import { extendTheme } from "@chakra-ui/react";
 
+
 export const quasarTheme = extendTheme({
     styles: {
         global: (props:any) => ({
             body: {
-                bg: '#1A202C'
-            }
+                bg: '#000000',
+            },
         })
     },
 

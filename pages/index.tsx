@@ -1,12 +1,28 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import { Container, Text, useColorMode, Button, Box, Stack, Heading } from '@chakra-ui/react'
+import {
+   Container,
+   Text,
+   useColorMode,
+   Button,
+   Box,
+   Stack,
+   Heading,
+   Image,
+   Card,
+  CardHeader, 
+  CardBody,
+  HStack,
+  Center} from '@chakra-ui/react'
 import { MoonIcon } from '@chakra-ui/icons'
 import Navbar from '../packages/stateless/components/Navbar'
+import stars from '../public/stars.jpeg'
 
 
 
 const inter = Inter({ subsets: ['latin'] })
+
+
 
 export default function Home() {
   // const { colorMode, toggleColorMode } = useColorMode()
@@ -21,20 +37,44 @@ export default function Home() {
       </Head>
       <Navbar />
       <Container maxW={'3xl'}>
-            <Stack  as={Box}
+            <Stack as={Box}
                 textAlign={'center'}
                 spacing={{ base: 8, md: 14 }}
                 py={{ base: 10, md: 20 }}>
+                  <Center>
                   <Heading  fontWeight={600}
                             fontSize={{ base: '2xl', sm: '4xl', md: '5xl' }}
                             lineHeight={'100%'}
-                            color='white'
                             mt={20}>
-                              Transparent Judging and Voting
+                              <HStack>
+                              <Text color={'white'}>Transparent Judging /</Text>
+                              <Text color={'#FB2576'}>Voting</Text> 
+                              </HStack>
                   </Heading>
+                  </Center>
                             <Text color='white'>
                             Quasar Module is a smart contract application and framework for custom IRL events.
                             </Text>
+                  <Center>
+                    <Card variant={'filled'} backgroundColor='#150050' opacity={'80%'} w={500} >
+                        <CardHeader>
+                            <Heading color={'white'} size='md'>
+                                What is Quasar?
+                            </Heading>
+                        </CardHeader>
+                        <CardBody textAlign={'left'} color={'white'}>
+                        The Quasar Module aims to bring the power of CosmWasm, and the integrity of on-chain voting to any hosted event that will elevate both the guest and host experience.
+                        Some of the things we do:
+
+                              <ul>
+                                <Text pt={5}>
+                                <li> In-Event Entry Judging </li>
+                                <li> Ticket Minting, Distribution, and Attendance Management  </li>
+                                </Text>
+                              </ul>
+                        </CardBody>
+                    </Card>
+                  </Center>
             </Stack>
       </Container>
     </>
