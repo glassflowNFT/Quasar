@@ -50,8 +50,8 @@ export default function Home() {
                             lineHeight={'100%'}
                             mt={20}>
                               <HStack>
-                              <Text color={'white'}>Transparent Judging /</Text>
-                              <Text color={'#FB2576'}>Voting</Text> 
+                              <Text  color={'white'}>Transparent Judging /</Text>
+                              <Text textShadow={'2px 3px white'} color={'#FB2576'}>Voting</Text> 
                               </HStack>
                   </Heading>
                   </Center>
