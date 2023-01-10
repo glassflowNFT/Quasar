@@ -1,6 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 import { StyleFunctionProps } from "@chakra-ui/react";
 import Button from '../theme/components/button'
+// import CardFunction from './components/cardFunction'
+// import Card from "./components/card";
+
+
 
 
 export const quasarTheme = extendTheme({
@@ -13,8 +17,10 @@ export const quasarTheme = extendTheme({
         })
     },
 
+
     components:{
-        Button
+        Button,
+        // Card
     },
     
     colors: {
@@ -40,3 +46,4 @@ export const quasarTheme = extendTheme({
    }
 }
 )
+

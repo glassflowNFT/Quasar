@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
     Box,
     Button,
@@ -10,7 +11,6 @@ import {
     useBreakpointValue,
     useColorModeValue,
     Text,
-    Link,
     Divider
   } from '@chakra-ui/react'
 import { ExternalLinkIcon, HamburgerIcon } from '@chakra-ui/icons'
@@ -18,6 +18,11 @@ import { ExternalLinkIcon, HamburgerIcon } from '@chakra-ui/icons'
 
 function Navbar() {
   const isDesktop = useBreakpointValue({ base: false, lg: true })
+
+  function toHome() {
+    
+  }
+
   return (
     <Box as='section'>
             <Box as='nav' mt={3} mb={3}>  
@@ -28,7 +33,9 @@ function Navbar() {
                           <Flex>
                           <HStack spacing="8" justify="space-between">
                               <Link color={'white'} href='https://github.com/glassflowNFT/Quasar'>Documentation <ExternalLinkIcon mx='2px'/> </Link>
+                              <Link href='/home' passHref>
                               <Button>Enter App <ExternalLinkIcon mx='2px'/></Button>
+                              </Link>
                           </HStack>
                       </Flex>
                         ) : (

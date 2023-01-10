@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
 import {
    Container,
    Text,
@@ -16,14 +17,17 @@ import {
   Center,
   useBreakpointValue} from '@chakra-ui/react'
 import { MoonIcon, ExternalLinkIcon } from '@chakra-ui/icons'
-import Navbar from '../packages/stateless/components/Navbar'
+import Navbar from '../packages/stateless/components/Layout/Navbar'
 import stars from '../public/stars.jpeg'
 
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-
+// async function connectOnClick() {
+//   setCurrentChain("juno")
+//  await connect()
+// }
 
 export default function Home() {
   // const { colorMode, toggleColorMode } = useColorMode()
@@ -60,7 +64,9 @@ export default function Home() {
                             <Text pb={5} w={'75%'} >
                             Quasar Module is a smart contract application and framework for custom IRL events.
                             </Text>
+                            <Link href='/home' passHref>
                             <Button>Enter App <ExternalLinkIcon mx='2px'/></Button>
+                            </Link>
                        </Stack>
                  </Center>         
                   <Center>
