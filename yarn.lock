@@ -1357,9 +1357,9 @@
   resolved "https://registry.yarnpkg.com/@cosmjs/utils/-/utils-0.29.5.tgz#3fed1b3528ae8c5f1eb5d29b68755bebfd3294ee"
   integrity sha512-m7h+RXDUxOzEOGt4P+3OVPX7PuakZT3GBmaM/Y2u+abN3xZkziykD/NvedYFvvCCdQo714XcGl33bwifS9FZPQ==
 
-"@dao-dao/types@2.0.0":
+"@quasar-vote/types@2.0.0":
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@dao-dao/types/-/types-2.0.0.tgz#bcefdae37fca9fae88692a5110860e5d25e4e057"
+  resolved "https://registry.yarnpkg.com/@quasar-vote/types/-/types-2.0.0.tgz#bcefdae37fca9fae88692a5110860e5d25e4e057"
   integrity sha512-rCMWGe+WkqxYp5gLANp+2/zCkSO2ux3RvNhYdsOvyClyQyQjNFqdEsCE3jOigVbL/sjqlifZSsotPxgDU8NMBA==
   dependencies:
     "@cosmjs/amino" "^0.28.4"
