@@ -8,7 +8,7 @@ import {
 } from '@cosmjs/stargate'
 import { ChainInfoID } from '@xiti/cosmodal'
 import { ProposalStatus } from 'cosmjs-types/cosmos/gov/v1beta1/gov'
-import { cosmos, juno } from 'interchain-rpc'
+import { cosmos, terp } from 'interchain-rpc'
 import { DelegationDelegatorReward } from 'interchain-rpc/types/codegen/cosmos/distribution/v1beta1/distribution'
 import {
   Proposal as GovProposal,
@@ -87,14 +87,14 @@ export const cosmosRpcClientForChainSelector = selectorFamily({
     ).cosmos,
 })
 
-export const junoRpcClientSelector = selector({
-  key: 'junoRpcClient',
+export const terpRpcClientSelector = selector({
+  key: 'terpRpcClient',
   get: async () =>
     (
-      await juno.ClientFactory.createRPCQueryClient({
+      await terp.ClientFactory.createRPCQueryClient({
         rpcEndpoint: getRpcForChainId(ChainInfoID.Terpnet1),
       })
-    ).juno,
+    ).terp,
 })
 
 export const blockHeightSelector = selectorFamily<number, WithChainId<{}>>({
@@ -295,9 +295,9 @@ export const blocksPerYearSelector = selectorFamily<number, WithChainId<{}>>({
   get:
     ({ chainId }) =>
     async ({ get }) => {
-      // If on juno mainnet or testnet, use juno RPC.
+      // If on terp mainnet or testnet, use terp RPC.
       if (CHAIN_BECH32_PREFIX === 'terp') {
-        const client = get(junoRpcClientSelector)
+        const client = get(terpRpcClientSelector)
         return (await client.mint.params()).params.blocksPerYear.toNumber()
       }
 

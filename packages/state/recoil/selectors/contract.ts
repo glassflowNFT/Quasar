@@ -7,7 +7,7 @@ import {
   blockHeightTimestampSafeSelector,
   cosmWasmClientForChainSelector,
 } from './chain'
-import { DaoCoreV2Selectors } from './contracts'
+import { EventCoreSelectors } from './contracts'
 import { queryContractIndexerSelector } from './indexer'
 
 export const contractInstantiateTimeSelector = selectorFamily<
@@ -78,7 +78,7 @@ export const contractVersionSelector = selectorFamily<
     ({ contractAddress, chainId }) =>
     async ({ get }) => {
       const info = get(
-        DaoCoreV2Selectors.infoSelector({
+        EventCoreSelectors.infoSelector({
           contractAddress,
           chainId,
           params: [],
@@ -111,7 +111,7 @@ export const isContractSelector = selectorFamily<
         const {
           info: { contract },
         } = get(
-          DaoCoreV2Selectors.infoSelector({
+          EventCoreSelectors.infoSelector({
             contractAddress,
             chainId,
             params: [],

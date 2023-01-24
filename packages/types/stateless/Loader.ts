@@ -3,4 +3,3 @@ export interface LoaderProps {
     size?: number | string
     className?: string
   }
-  
