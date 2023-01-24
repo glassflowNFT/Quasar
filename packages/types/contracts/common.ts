@@ -216,3 +216,55 @@ export type IbcMsg =
       }
     }
 
+// V2
+export type Admin =
+  | {
+      address: {
+        addr: string
+      }
+    }
+  | {
+      core_module: {}
+    }
+
+// V2
+export interface ModuleInstantiateInfo {
+  admin?: Admin | null
+  code_id: number
+  label: string
+  msg: Binary
+}
+
+export interface ContractVersionInfo {
+  contract: string
+  version: string
+}
+export interface InfoResponse {
+  info: ContractVersionInfo
+}
+
+// Pre-propose stuff.
+export type CheckedDenom =
+  | {
+      native: string
+    }
+  | {
+      cw20: Addr
+    }
+export enum DepositRefundPolicy {
+  Always = 'always',
+  OnlyPassed = 'only_passed',
+  Never = 'never',
+}
+export interface CheckedDepositInfo {
+  amount: Uint128
+  denom: CheckedDenom
+  refund_policy: DepositRefundPolicy
+}
+
+export interface MintMsg {
+  mint: {
+    amount: Uint128
+    recipient: string
+  }
+}

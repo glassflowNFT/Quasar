@@ -91,7 +91,7 @@ const eslintConfig = {
                 'Import from @quasar-vote/* instead of a relative path (i.e. replace "@/../../packages" with "@quasar-vote").',
             },
             {
-              regex: '\\@dao\\-dao\\/stateless\\/(components|theme)[^\'"]*',
+              regex: '\\@quasar\\-vote\\/stateless\\/(components|theme)[^\'"]*',
               replacement: '@quasar-vote/stateless',
               files: {
                 // Let storybook files (stories and files within the storybook
