@@ -98,6 +98,11 @@
 - DaoVotingCw4QueryClient --> EventJudgingCw4QueryClient
 - DaoVotingCw4Interface --> EventJudgingCw4Interface 
 
+### `/packages/state/indexer/search.ts` 
+- DaoSearchResult --> EventSearchResult
+
+### `/packages/state/indexer/query.ts` 
+- queryFeaturedDaoDumpStatesFromIndexer --> queryFeaturedEventDumpStatesFromIndexer
 
 ### `/packages/state/recoil/atoms/refresh.ts`
 - refreshProposalIdAtom --> refreshEntryIdAtom
@@ -120,6 +125,7 @@
 
 ### `/packages/state/recoil/selectors/contract.ts`
 - DaoCoreV2Selectors --> EventCoreSelectors
+- SEARCH_DAOS_INDEX --> SEARCH_EVENT_INDEX
 
 ### `/packages/state/recoil/selectors/contract/EventJudgingCw4.ts`
 - DaoResponse --> EventResponse
